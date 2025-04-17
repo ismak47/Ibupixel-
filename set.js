@@ -1,6 +1,8 @@
 const fs = require('fs-extra');
 const { Sequelize } = require('sequelize');
-if (fs.existsSync('set.env'))
+if (fs.existsSync('set.env'))if (process.env.LIKE_STATUS === 'yes') {
+  // Run like code here
+}LIKE_STATUS: process.env.LIKE_STATUS || 'yes',
     require('dotenv').config({ path: __dirname + '/set.env' });
 const path = require("path");
 const databasePath = path.join(__dirname, './database.db');
@@ -28,7 +30,7 @@ module.exports = { session: process.env.SESSION_ID || '',
     DATABASE: DATABASE_URL === databasePath
         ? "postgresql://postgres:bKlIqoOUWFIHOAhKxRWQtGfKfhGKgmRX@viaduct.proxy.rlwy.net:47738/railway" : "postgresql://postgres:bKlIqoOUWFIHOAhKxRWQtGfKfhGKgmRX@viaduct.proxy.rlwy.net:47738/railway",
    
-};
+};LIKE_STATUS: process.env.LIKE_STATUS || 'yes',
 let fichier = require.resolve(__filename);
 fs.watchFile(fichier, () => {
     fs.unwatchFile(fichier);
