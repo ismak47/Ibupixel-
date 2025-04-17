@@ -1,6 +1,6 @@
 const fs = require('fs-extra');
 const { Sequelize } = require('sequelize');
-if (fs.existsSync('set.env'))
+if (fs.existsSync('set.env'))AUTO_ STATUS _ LIKE_ EMOJI"💝","😍","✌️"
     require('dotenv').config({ path: __dirname + '/set.env' });
 const path = require("path");
 const databasePath = path.join(__dirname, './database.db');
